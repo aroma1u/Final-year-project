@@ -1,0 +1,54 @@
+============================================================
+MSCMGTB - 50% IMPLEMENTATION EXPERIMENTAL RESULTS (RECONSTRUCTED)
+============================================================
+
+DATASET INFORMATION:
+  Training samples   : 8500
+  Validation samples : 831 (dev_seen + dev_unseen)
+  Test samples       : 2593 (test_seen + test_unseen)
+
+MODEL ARCHITECTURE:
+  Visual Encoder     : ResNet50 (2048-dimensional visual features)
+  Visual Projection  : Linear(2048, 512) -> LayerNorm -> GELU -> Dropout -> Linear -> LayerNorm
+  Text Encoder       : BERT bert-base-uncased (768-dimensional textual features)
+  Text Projection    : Linear(768, 512) -> LayerNorm -> GELU -> Dropout -> Linear -> LayerNorm
+  Multimodal Fusion  : Cross-Modal Conditioned BAM + Hadamard Bilinear Interaction (2048 -> 512)
+  Classifier         : Linear(512, 256) -> LayerNorm -> GELU -> Dropout -> Linear(256, 128) -> Linear(128, 2)
+
+TRAINING PARAMETERS:
+  Batch size         : 32
+  Learning rate      : 0.001
+  Epochs             : 10
+  Optimizer          : AdamW (weight_decay=1e-4)
+  Scheduler          : CosineAnnealingLR (eta_min=1e-5)
+  Loss Function      : Class-Weighted Focal Loss (gamma=1.5, label_smoothing=0.05)
+  Calibrated Threshold : 0.4100
+
+PROPOSED MODEL VALIDATION RESULTS:
+  Accuracy           : 55.11%
+  Precision          : 48.85%
+  Recall             : 83.01%
+  F1-score           : 61.51%
+  AUROC              : 59.86%
+
+CONFUSION MATRIX (VALIDATION):
+[[160 312]
+ [ 61 298]]
+
+PROPOSED MODEL TEST RESULTS:
+  Accuracy           : 54.26%
+  Precision          : 47.52%
+  Recall             : 84.50%
+  F1-score           : 60.83%
+  AUROC              : 65.48%
+
+BASELINE COMPARISON TABLE (VALIDATION):
+Model                            | Accuracy   | Precision  | Recall     | F1 Score   | AUROC     
+----------------------------------------------------------------------------------------
+BERT-only                        |  55.11%    |  48.75%    |  75.77%    |  59.32%    |  60.71%
+CNN-only                         |  46.81%    |  43.07%    |  71.87%    |  53.86%    |  47.92%
+CNN + BERT (No BAM)              |  55.84%    |  49.11%    |  61.28%    |  54.52%    |  57.76%
+CNN + BERT + BAM (Proposed)      |  55.11%    |  48.85%    |  83.01%    |  61.51%    |  59.86%
+
+BEST CHECKPOINT PATH:
+  checkpoints/best_multimodal_model.pth

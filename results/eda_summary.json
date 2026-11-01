@@ -1,0 +1,307 @@
+{
+  "train": {
+    "num_rows": 8500,
+    "text_stats": {
+      "avg_words_per_meme": 11.74,
+      "min_words": 1,
+      "max_words": 70,
+      "total_vocab_words": 12644,
+      "top_10_words": [
+        [
+          "the",
+          3101
+        ],
+        [
+          "a",
+          2660
+        ],
+        [
+          "you",
+          2614
+        ],
+        [
+          "to",
+          2202
+        ],
+        [
+          "i",
+          1921
+        ],
+        [
+          "and",
+          1468
+        ],
+        [
+          "when",
+          1370
+        ],
+        [
+          "is",
+          1249
+        ],
+        [
+          "of",
+          1194
+        ],
+        [
+          "in",
+          1189
+        ]
+      ]
+    },
+    "class_distribution": {
+      "0": 5481,
+      "1": 3019
+    },
+    "sample_image_dims": {
+      "min_width": 177,
+      "max_width": 825,
+      "min_height": 329,
+      "max_height": 800
+    }
+  },
+  "dev_seen": {
+    "num_rows": 398,
+    "text_stats": {
+      "avg_words_per_meme": 10.3,
+      "min_words": 1,
+      "max_words": 42,
+      "total_vocab_words": 1414,
+      "top_10_words": [
+        [
+          "the",
+          146
+        ],
+        [
+          "a",
+          105
+        ],
+        [
+          "to",
+          95
+        ],
+        [
+          "you",
+          84
+        ],
+        [
+          "of",
+          70
+        ],
+        [
+          "and",
+          68
+        ],
+        [
+          "is",
+          63
+        ],
+        [
+          "in",
+          57
+        ],
+        [
+          "i",
+          53
+        ],
+        [
+          "are",
+          45
+        ]
+      ]
+    },
+    "class_distribution": {
+      "1": 198,
+      "0": 200
+    },
+    "sample_image_dims": {
+      "min_width": 160,
+      "max_width": 825,
+      "min_height": 331,
+      "max_height": 800
+    }
+  },
+  "dev_unseen": {
+    "num_rows": 433,
+    "text_stats": {
+      "avg_words_per_meme": 9.1,
+      "min_words": 1,
+      "max_words": 42,
+      "total_vocab_words": 1340,
+      "top_10_words": [
+        [
+          "the",
+          138
+        ],
+        [
+          "a",
+          112
+        ],
+        [
+          "to",
+          89
+        ],
+        [
+          "you",
+          76
+        ],
+        [
+          "of",
+          75
+        ],
+        [
+          "is",
+          60
+        ],
+        [
+          "and",
+          60
+        ],
+        [
+          "in",
+          53
+        ],
+        [
+          "i",
+          47
+        ],
+        [
+          "your",
+          41
+        ]
+      ]
+    },
+    "class_distribution": {
+      "0": 272,
+      "1": 161
+    },
+    "sample_image_dims": {
+      "min_width": 512,
+      "max_width": 512,
+      "min_height": 317,
+      "max_height": 1054
+    }
+  },
+  "test_seen": {
+    "num_rows": 1000,
+    "text_stats": {
+      "avg_words_per_meme": 10.42,
+      "min_words": 1,
+      "max_words": 57,
+      "total_vocab_words": 2743,
+      "top_10_words": [
+        [
+          "the",
+          374
+        ],
+        [
+          "a",
+          269
+        ],
+        [
+          "to",
+          262
+        ],
+        [
+          "you",
+          217
+        ],
+        [
+          "i",
+          185
+        ],
+        [
+          "of",
+          160
+        ],
+        [
+          "when",
+          147
+        ],
+        [
+          "and",
+          139
+        ],
+        [
+          "in",
+          122
+        ],
+        [
+          "is",
+          111
+        ]
+      ]
+    },
+    "class_distribution": {
+      "1": 490,
+      "0": 510
+    },
+    "sample_image_dims": {
+      "min_width": 240,
+      "max_width": 825,
+      "min_height": 255,
+      "max_height": 800
+    }
+  },
+  "test_unseen": {
+    "num_rows": 1593,
+    "text_stats": {
+      "avg_words_per_meme": 9.08,
+      "min_words": 1,
+      "max_words": 47,
+      "total_vocab_words": 2897,
+      "top_10_words": [
+        [
+          "the",
+          540
+        ],
+        [
+          "a",
+          379
+        ],
+        [
+          "to",
+          335
+        ],
+        [
+          "you",
+          320
+        ],
+        [
+          "when",
+          251
+        ],
+        [
+          "of",
+          212
+        ],
+        [
+          "i",
+          206
+        ],
+        [
+          "in",
+          173
+        ],
+        [
+          "and",
+          173
+        ],
+        [
+          "is",
+          171
+        ]
+      ]
+    },
+    "class_distribution": {
+      "1": 600,
+      "0": 993
+    },
+    "sample_image_dims": {
+      "min_width": 512,
+      "max_width": 512,
+      "min_height": 300,
+      "max_height": 1366
+    }
+  }
+}
